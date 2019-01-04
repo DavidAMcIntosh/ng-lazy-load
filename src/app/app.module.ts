@@ -14,11 +14,11 @@ const routes: Routes = [
 },
 {
   path: "viewdetails", 
-  loadChildren: "app/viewdetails/viewdetails.module#ViewDetailsModule"
+  loadChildren: "./viewdetails/viewdetails.module#ViewdetailsModule"
 },
 {
   path: "about", 
-  loadChildren: "app/about/about.module#AboutModule"
+  loadChildren: "./about/about.module#AboutModule"
 }];
 
 @NgModule({
@@ -28,7 +28,8 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
